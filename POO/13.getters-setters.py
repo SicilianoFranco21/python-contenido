@@ -38,3 +38,23 @@
         def set_nombre(self, nuevo_nombre):
             self.__nombre = nuevo_nombre 
 """
+
+
+class Persona:
+    def __init__(self, nombre):
+        self.__nombre = nombre
+
+    #SETTER
+    def set_nombre(self, nuevo_nombre):
+        self.__nombre = nuevo_nombre
+    
+    #GETTER
+    def get_nombre(self):
+        return self.__nombre
+
+
+persona = Persona("Martin")
+print(persona.get_nombre()) #Usamos el GETTER para mostrar el nombre previo a utilizar el SETTER
+
+persona.set_nombre("Santiago") #Uso del SETTER para modificar el nombre original
+print(persona.get_nombre())
