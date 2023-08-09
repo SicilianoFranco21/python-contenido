@@ -7,7 +7,7 @@ Repositorio dedicado al aporte de teoria, ejemplos y ejercicios de los distintos
 
 ------------------------------------------------------------------------------------------------
 
->>> Temario
+<<< Temario >>>
 - POO
 - Programacion Estructurada
 - Ejercicios (nivel inicial, intermedio y avanzado)
@@ -15,13 +15,13 @@ Repositorio dedicado al aporte de teoria, ejemplos y ejercicios de los distintos
 
 ------------------------------------------------------------------------------------------------
 
->>> PROPOSITOS
+<<< PROPOSITOS >>>
 1. Divulgar los distintos contenidos de Python de forma mas sintetica y practica
 2. Enseniar la LOGICA de la programacion en terminos generales (en este caso utilizaremos Python para fines educativos)
 
 ------------------------------------------------------------------------------------------------
 
->>> FUENTES
+<<< FUENTES >>>
 - Apuntes (teoria + ejercicios) y contenido general de autoria propia
 - https://www.youtube.com/@soydalto (Para la seccion POO)
 - Aplicar PromptEngineering a ChatGPT3
