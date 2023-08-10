@@ -23,6 +23,36 @@
 
             <<<Metodos especiales >>>
             - CONSTRUCTORES: Se llaman asi porque construyen la clase por cada instancia que se le realiza a la misma                    
+
+            METODOS DE INSTANCIA: Funciones que estan asociadas a una instancia en especifica, esto significa que
+                        estos metodos trabajan con los datos particulares de una instancia. 
+                        - Los metodos de instancia tiene el primer parametro llamado "self"
+                        Ejemplo:
+                            class Perro:
+                                def __init__(self, nombre):
+                                    self.nombre = nombre
+
+                                def ladrar(self):
+                                    print(f"{self.nombre} está ladrando")
+
+                            mi_perro = Perro("Max")
+                            mi_perro.ladrar()  # Esto imprimirá "Max está ladrando"
+
+            METODOS DE CLASE: Funciones que estan asociadas a la clase en lugar de una instancia especifica. Estos
+                        metodos trabajan con datos de la clase en general y no requieren crear una instancia
+                        para usarlos. Usamos como primer parametro "cls" (convencion que se refiere a la clase en si)
+                        EJEMPLO:
+                            class Circulo:
+                                pi = 3.14159
+
+                                def __init__(self, radio):
+                                    self.radio = radio
+
+                                @classmethod
+                                def imprimir_pi(cls):
+                                    print(f"El valor de pi es: {cls.pi}")
+
+                            Circulo.imprimir_pi()  # Esto imprimirá "El valor de pi es: 3.14159"          
 """
 
 
