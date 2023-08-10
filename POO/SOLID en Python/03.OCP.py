@@ -3,6 +3,8 @@
         Analogamente podemos decir, que cuando construimos algo, deberia ser como un juguete al que se puede
         agregar mas partes sin tener que romperlo o desarmarlo. Con esto, evitamos romper lo que ya esta hecho
         SIGNIFICADO REAL DE OCP --> "Open for extension, Closed for modify"
+        - ENFOQUE --> Extensibilidad del sistema
+        
     >>> VENTAJAS
         [1] - EXTENSIBILIDAD: Agregar nuevas funcionalidades al sistema sin modificar el codigo existente
                             Esto facilita la adaptacion del software a los cambios y requisitos futuros
