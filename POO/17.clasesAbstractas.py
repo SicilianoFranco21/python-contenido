@@ -37,6 +37,11 @@
             puede ser utilizado por todas las clases concretas, responden a un mismo mensaje de manera similar (NO IGUAL)
         3. NIVEL EXTRA DE SEGURIDAD
         4. SE EVITA REPETIR CODIGO
+    
+    >>> Funcionamiento de la libreria 'abc':
+        -> abstractclassmethod: Decorador que se utiliza para metodos de clase. No hace falta crear una instanca de clase para utilziar dicho metodo
+        -> ABC: Herramienta que ayuda a definir una estructura y conjunto de metodos que deben ser implementados por las clases hijas
+        -> abstractmethod: Decorador que se utiliza para metodos de instancia (los que empiezan con self)
 
 """
 
