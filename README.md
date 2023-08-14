@@ -3,7 +3,6 @@
 --------------------------
 
 Repositorio dedicado al aporte de teoria, ejemplos y ejercicios de los distintos temas de Python
-(Proximamente se lanzara version en ingles)
 
 ------------------------------------------------------------------------------------------------
 
@@ -23,6 +22,6 @@ Repositorio dedicado al aporte de teoria, ejemplos y ejercicios de los distintos
 
 <<< FUENTES >>>
 - Apuntes (teoria + ejercicios) y contenido general de autoria propia
-- https://www.youtube.com/@soydalto (Unicamente para la seccion POO)
+- https://www.youtube.com/@soydalto (Usado parcialmente para la seccion POO)
 - Aplicar PromptEngineering a ChatGPT3
 - https://uniwebsidad.com/
