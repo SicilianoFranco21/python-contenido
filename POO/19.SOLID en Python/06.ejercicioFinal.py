@@ -15,7 +15,7 @@ EJERCICIO con el proposito de aplicar la mayor cantidad de conceptos posibles de
                             - Paladin, puede atacar con la espada y defenderse con barreras magicas (Mitad de mana que el mago)
                             - Herrero, es el que fabrica las armaduras para los demas personajes (Sin mana) 
                     -> Mecanicas del juego:
-                            - Cada personaje tiene una barra de salud (HP) y habilidades unicas
+                            - Cada personaje tiene una barra de salud (HP), energia (stamina) y habilidades unicas (libertad creativa, aunque el Herrero si o si su habilidad unica es la herreria)
                             - Los tesoros aumentan las stats de los personajes + monedas de oro
                             - Crear un menu con opciones para: Empezar a jugar, elegir clase y nombre de nuestro personaje de cabecera,
                                 seleccionar cantidad de enemigos y salir del juego
@@ -30,3 +30,11 @@ EJERCICIO con el proposito de aplicar la mayor cantidad de conceptos posibles de
                     - Si el juegador pierde, se borraran los datos del mismo
                     - Si el jugador gana, su personaje se mantendra guardado
 """
+
+from abc import ABC, abstractclassmethod, abstractmethod
+
+
+class Personaje(ABC):
+    def __init__(self, hp, stamina):
+        self.hp = hp
+        self.stamina = stamina
