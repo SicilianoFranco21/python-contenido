@@ -40,7 +40,8 @@
     
     >>> Funcionamiento de la libreria 'abc':
         -> abstractclassmethod: Decorador que se utiliza para metodos de clase. No hace falta crear una instanca de clase para utilziar dicho metodo
-        -> ABC: Herramienta que ayuda a definir una estructura y conjunto de metodos que deben ser implementados por las clases hijas
+        -> ABC: Herramienta que ayuda a definir una estructura y conjunto de metodos que deben ser implementados obligatoriamente por las clases hijas. 
+                No se puede instanciar directamente a la clase abstracta
         -> abstractmethod: Decorador que se utiliza para metodos de instancia (los que empiezan con self)
 
 """
