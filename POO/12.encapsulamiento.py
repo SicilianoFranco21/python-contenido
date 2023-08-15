@@ -78,6 +78,6 @@ class Credencial(Persona):
         return self.__contrasenia
     
 
-tarjeta: Credencial = Credencial("Franco", 41392371, "Marcelo123")
+tarjeta: Credencial = Credencial("Franco", 41123123, "contraseniafalsa123")
 print(tarjeta.obtener_contrasenia())
 print(tarjeta.obtener_datos())

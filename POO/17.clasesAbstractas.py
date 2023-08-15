@@ -89,6 +89,6 @@ franco.hacer_actividad() #llamamos al metodo abstracto, estudiante le da una imp
 print("\n")
 
 
-trabajador_demberg: Trabajador = Trabajador("Demberg", 69, "Indefinido", "informatica")
+trabajador_demberg: Trabajador = Trabajador("Martina", 21, "Femenino", "informatica")
 trabajador_demberg.presentarse()
 trabajador_demberg.hacer_actividad()

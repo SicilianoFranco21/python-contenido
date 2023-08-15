@@ -61,14 +61,14 @@ class Jefe(Persona):
 
 
 #Instancia de clase padre Persona
-persona_random: Persona = Persona("Marcelo", 25, "Chino")
+persona_random: Persona = Persona("Chen", 25, "Chino")
 
 
 #Instancia de clases hijas Empleado, Estudiante, Jefe
 #Aqui podemos apreciar la dependencia de las clases hijas con respecto a la clase padre, esto es Herencia Multiple
 trabajador: Empleado = Empleado("Fran", 25, "Argentino", "Progrmador", 225000)
-alumno: Estudiante = Estudiante("Nico", 24, "Paraguayo", [7, 8, 9], "UADE")
-gerente: Jefe = Jefe("Renzo", 25, "Peruano", "COTO", 0)
+alumno: Estudiante = Estudiante("Nico", 24, "Chileno", [7, 8, 9], "UADE")
+gerente: Jefe = Jefe("Renzo", 25, "Ingles", "COTO", 0)
 
 
 mostrar_datos(persona_random)

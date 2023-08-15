@@ -44,7 +44,7 @@ class EmpleadoArtista(Persona, Artista):
     def presentarse(self):
         print(f"Hola, soy: {self.nombre}, {self.mostrar_habilidad()} y trabajo en {self.empresa}")
         # >>> return f"Hola soy Franco. {super().mostrar_habilidad()}" #De esta manera accedemos al metodo padre, con super()
-        # >>> return f"Hola soy Franco. {self.mostrar_habilidad()}" Accedemos al metodo de la propia clase, ya que self es una referencia asi mismo
+        # >>> return f"Hola soy Franco. {self.mostrar_habilidad()}" #Accedemos al metodo de la propia clase, ya que self es una referencia asi mismo
 
 roberto: EmpleadoArtista = EmpleadoArtista("Roberto", 43, "Argentino", "Cantar", "Google", 100000)
 roberto.presentarse()
