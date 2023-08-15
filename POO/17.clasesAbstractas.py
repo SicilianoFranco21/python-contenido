@@ -19,7 +19,7 @@
                             - Utilizado para declararlo en la plantilla, se implementan en las clases concretas
                             - Una vez declarado el metodo abstracto hay que definirlo en la clase concreta obligatoriamente
                 - Podemos hacerlo de la siguientes formas:
-                [1] - from abc import ABC, abstractclassmethod
+                [1] - from abc import ABC, abstractclassmethod, abstractmethod
                 [2] - from abc import *
 
         2) SEGUNDO:
