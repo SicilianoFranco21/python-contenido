@@ -26,15 +26,88 @@ EJERCICIO con el proposito de aplicar la mayor cantidad de conceptos posibles de
                     - Los tesoros se otorgaran al ganador de cada ronda
                     - La cantidad de rondas sera igual a la cantidad de personajes introducidos (sin contar nuestro personaje)
                     - Cada opcion del menu principal debe realizar lo indicado en la seccion "Mecanicas del juego"
-                    - Finalizaicon del juego: El juego finaliza cuando el jugador gana a todos los personajes o pierde una sola vez
+                    - Finalizacion del juego: El juego finaliza cuando el jugador gana a todos los personajes o pierde una sola vez
                     - Si el juegador pierde, se borraran los datos del mismo
                     - Si el jugador gana, su personaje se mantendra guardado
 """
 
-from abc import ABC, abstractclassmethod, abstractmethod
+
+from abc import ABC, abstractmethod, abstractclassmethod
 
 
-class Personaje(ABC):
-    def __init__(self, hp, stamina):
+class PersonajeGenerico(ABC):
+    def __init__(self, hp, stamina, ataque, defensa):
         self.hp = hp
         self.stamina = stamina
+        self.ataque = ataque
+        self.defensa = defensa
+
+    @abstractmethod
+    def habilidad_especial(self):
+        pass
+
+
+class AtributosMagicos:
+    def __init__(self, mana):
+        self.mana = mana
+
+
+class PersonajeMagico(ABC, AtributosMagicos):
+    def __init__(self, hp, stamina, ataque, defensa, mana):
+        PersonajeGenerico.__init__(self, hp, stamina, ataque, defensa)
+        AtributosMagicos.__init__(self, mana)
+
+
+class Guerrero(PersonajeGenerico):
+    def __init__(self):
+        super().__init__(hp=100, stamina=100, ataque=35, defensa=30)
+
+    def habilidad_especial(self):
+        print("Corte con espada")
+
+
+class Mago(PersonajeMagico):
+    def __init__(self):
+        super().__init__(hp=200, stamina=60, ataque=15, defensa=10, mana=200)
+
+    def habilidad_especial(self):
+        print("Hechizo: esferas de fuego")
+
+
+class Paladin(PersonajeMagico):
+    def __init__(self):
+        super().__init__(hp=120, stamina=80, ataque=25, defensa=20, mana=100)
+
+    def habilidad_especial(self):
+        print("Espada mágica")
+
+
+class Herrero(PersonajeGenerico):
+    def __init__(self):
+        super().__init__(hp=50, stamina=200, ataque=5, defensa=5)
+
+    def habilidad_especial(self):
+        print("Herrería")
+
+
+herrero = Herrero()
+print(f"HP: {herrero.hp} | Stamina: {herrero.stamina} | Ataque: {herrero.ataque} | Defensa: {herrero.defensa}")
+herrero.habilidad_especial()
+print()
+
+
+paladin = Paladin()
+print(f"HP: {paladin.hp} | Stamina: {paladin.stamina} | Ataque: {paladin.ataque} | Defensa: {paladin.defensa} | Mana: {paladin.mana}")
+paladin.habilidad_especial()
+print()
+
+
+mago = Mago()
+print(f"HP: {mago.hp} | Stamina: {mago.stamina} | Ataque: {mago.ataque} | Defensa: {mago.defensa} | Mana: {mago.mana}")
+mago.habilidad_especial()
+print()
+
+
+guerrero = Guerrero()
+print(f"HP: {guerrero.hp} | Stamina: {guerrero.stamina} | Ataque: {guerrero.ataque} | Defensa: {guerrero.defensa}")
+guerrero.habilidad_especial()
