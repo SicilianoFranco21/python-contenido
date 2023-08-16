@@ -15,7 +15,6 @@ persona1: Persona = Persona("Agustina", 24)
 persona2: Persona = Persona("Santino", 18)
 
 
-
 #Funcion para mostrar los atributos de las instancias creadas a partir de la clase Persona
 def presentarse(*args: Persona) -> None:
     contador_personas: int = 0
@@ -24,4 +23,5 @@ def presentarse(*args: Persona) -> None:
         print(f"[{contador_personas}] --> Hola me llamo {persona.nombre} y mi tengo {persona.edad} anios")
 
 
+#Llamar al PROCEDIMIENTO 'presentarse'
 presentarse(persona1, persona2)
