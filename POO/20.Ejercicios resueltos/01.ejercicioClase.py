@@ -2,7 +2,7 @@
 Crea una clase llamada Persona que tenga atributos como nombre y edad. 
 Luego, crea objetos de esta clase y muestra sus atributos.
 """
-#RECOMENDACION: Expresar libertad creativa en el ejercicio. No descuidar el desenfoque del mismo y que funcione correctamente
+#RECOMENDACION: Expresar libertad creativa en el ejercicio. No descuidar el enfoque del mismo y que funcione correctamente
 
 
 #Crear la clase Persona

@@ -3,7 +3,7 @@ Crea una clase CuentaBancaria con atributos como saldo y
 nombre del titular. Agrega métodos para depositar y retirar dinero. 
 Realiza algunas operaciones con objetos de esta clase.
 """
-#RECOMENDACION: Expresar libertad creativa en el ejercicio. No descuidar el desenfoque del mismo y que funcione correctamente
+#RECOMENDACION: Expresar libertad creativa en el ejercicio. No descuidar el enfoque del mismo y que funcione correctamente
 
 
 # Importar el modulo os
@@ -31,6 +31,16 @@ class CuentaBancaria:
 # Crear instancias de clase
 cuenta1: CuentaBancaria = CuentaBancaria("Marcelo Diaz", 100000)
 cuenta2: CuentaBancaria = CuentaBancaria("Agustin Gomez", 55250)
+
+
+# Utilizar metodos
+cuenta1.depositar(200)
+cuenta2.retirar(500000)
+print("\n")
+
+
+# Aca finaliza el ejercicio, de aca para abajo se realizo un programa mas completo con distintas opciones aplicando programacion estructurada
+# -------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Procedimiento encargado de mostrar las opciones del programa
