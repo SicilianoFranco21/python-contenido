@@ -78,7 +78,7 @@ class Celular:
     def cortar(self):
         print(f"Cortaste la llamada desde un: {self.modelo}")
 
-#Creamos un OBJETO, tipo de dato es object (se almacena en la ram). Le pasamos los parametros que definimos en el __init__
+#Creamos un OBJETO, tipo de dato es Celular (se almacena en la ram). Le pasamos los parametros que definimos en el __init__
 celular1 = Celular("Samsung", "S23", "48PM")
 celular2 = Celular("Apple", "Iphone 15 Pro", "96MP")
 print(celular1)
