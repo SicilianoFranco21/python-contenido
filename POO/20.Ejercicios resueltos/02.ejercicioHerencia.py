@@ -9,23 +9,23 @@ puertas para el auto y el tipo de motor para la motocicleta.
 
 #Crear super-clase (Clase padre) Vehiculo
 class Vehiculo:
-    def __init__(self, marca, modelo):
-        self.marca: str = marca
-        self.modelo: str = modelo
+    def __init__(self, marca: str, modelo: str):
+        self.marca = marca
+        self.modelo = modelo
 
 
 #Crear sub-clase (clase hija) Automovil
 class Automovil(Vehiculo):
-    def __init__(self, marca, modelo, puertas):
+    def __init__(self, marca: str, modelo: str, puertas: int):
         super().__init__(marca, modelo)
-        self.puertas: int = puertas
+        self.puertas = puertas
 
 
 #Crear sub-clase (clase hija) Motocicleta
 class Motocicleta(Vehiculo):
-    def __init__(self, marca, modelo, tipo_motor):
+    def __init__(self, marca: str, modelo: str, tipo_motor: str):
         super().__init__(marca, modelo)
-        self.tipo_motor: str = tipo_motor
+        self.tipo_motor = tipo_motor
 
 
 #Instancias de las clases Automovil y Motocicleta
