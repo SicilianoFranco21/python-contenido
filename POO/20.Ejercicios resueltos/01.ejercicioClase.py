@@ -3,17 +3,20 @@ Crea una clase llamada Persona que tenga atributos como nombre y edad.
 Luego, crea objetos de esta clase y muestra sus atributos.
 """
 
-
+#Crear la clase Persona
 class Persona:
     def __init__(self, nombre, edad):
         self.nombre: str = nombre
         self.edad: int = edad
 
 
+#Generar instancias de la clase Persona
 persona1: Persona = Persona("Agustina", 24)
 persona2: Persona = Persona("Santino", 18)
 
 
+
+#Funcion para mostrar los atributos de las instancias creadas a partir de la clase Persona
 def presentarse(*args: Persona) -> None:
     contador_personas: int = 0
     for persona in args:
