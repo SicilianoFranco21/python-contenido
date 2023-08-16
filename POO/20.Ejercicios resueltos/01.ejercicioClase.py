@@ -2,6 +2,8 @@
 Crea una clase llamada Persona que tenga atributos como nombre y edad. 
 Luego, crea objetos de esta clase y muestra sus atributos.
 """
+#RECOMENDACION: Expresar libertad creativa en el ejercicio. No descuidar el desenfoque del mismo y que funcione correctamente
+
 
 #Crear la clase Persona
 class Persona:
@@ -23,5 +25,5 @@ def presentarse(*args: Persona) -> None:
         print(f"[{contador_personas}] --> Hola me llamo {persona.nombre} y mi tengo {persona.edad} anios")
 
 
-#Llamar al PROCEDIMIENTO 'presentarse'
+#Llamar al PROCEDIMIENTO 'presentarse' (Aca esta mi libertad creativa respecto a como mostrar los atributos)
 presentarse(persona1, persona2)
