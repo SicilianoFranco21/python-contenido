@@ -72,7 +72,7 @@ class Celular:
         self.camara = camara
     
     #Metodo creado para que la clase Celular realice una accion
-    def llamar(self): #Hay que pasarles el parametro self SI o SI
+    def llamar(self): #Hay que pasarles el parametro self SI o SI a los METODOS DE INSTANCIA
         print(f"Estas haciendo un llamado desde un: {self.modelo}")
     
     def cortar(self):
