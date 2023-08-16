@@ -42,7 +42,7 @@ class EmpleadoArtista(Persona, Artista):
         self.salario = salario
 
     def presentarse(self):
-        print(f"Hola, soy: {self.nombre}, {self.mostrar_habilidad()} y trabajo en {self.empresa}")
+        print(f"Hola, soy {self.nombre}. {self.mostrar_habilidad()}. Trabajo en {self.empresa}")
         # >>> return f"Hola soy Franco. {super().mostrar_habilidad()}" #De esta manera accedemos al metodo padre, con super()
         # >>> return f"Hola soy Franco. {self.mostrar_habilidad()}" #Accedemos al metodo de la propia clase, ya que self es una referencia asi mismo
 
@@ -51,8 +51,9 @@ roberto.presentarse()
 
 #issubclass(clase1, clase2): Valida la clase 1 hereda de la clase 2. True si es verdadero, caso contrario, false
 herencia: bool = issubclass(EmpleadoArtista, Artista)
-print(herencia)
+print("Instancia herencia:", herencia)
 
 
 #isinstance(objeto, clase): Valida si el objeto es una instancia de la clase. Ture si es verdadero, caso contrario, false
 instancia: bool = isinstance(roberto, EmpleadoArtista)
+print("Instancia 'instancia':", instancia)
