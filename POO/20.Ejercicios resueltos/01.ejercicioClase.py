@@ -7,9 +7,9 @@ Luego, crea objetos de esta clase y muestra sus atributos.
 
 #Crear la clase Persona
 class Persona:
-    def __init__(self, nombre: str, edad: int):
-        self.nombre = nombre
-        self.edad = edad
+    def __init__(self, nombre, edad):
+        self.nombre: str = nombre
+        self.edad: int = edad
 
 
 #Generar instancias de la clase Persona
