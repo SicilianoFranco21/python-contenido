@@ -31,7 +31,7 @@ class Persona:
 
 class Estudiante(Persona):
     def __init__(self, nombre, edad, grado):
-        super().__init__(nombre, edad) #Si usamos super, no pasamos self, caso contrario si.
+        super().__init__(nombre, edad) # Si usamos super, no pasamos self, caso contrario si.
         self.grado = grado
     
     def mostrar_grado(self):
@@ -41,7 +41,7 @@ class Estudiante(Persona):
 estudiante: Estudiante = Estudiante("Fran", 25, 6)
 
 
-#vars(obj): Devuelve un diccionario con los atributos y valores del objeto
+# vars(obj): Devuelve un diccionario con los atributos y valores del objeto
 
 def mostrar_datos(estudiante: Estudiante) -> None:
     for atributo, valor in vars(estudiante).items():

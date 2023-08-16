@@ -31,9 +31,9 @@
 """
 
 
-#SINTAXIS Y EJEMPLO
-def decorador(funcion): #Decorador: Podemos verlo como un envoltorio de la funcion a modificar
-    def funcion_modificada(): #Funcion modificada por el decorador
+# SINTAXIS Y EJEMPLO
+def decorador(funcion): # Decorador: Podemos verlo como un envoltorio de la funcion a modificar
+    def funcion_modificada(): # Funcion modificada por el decorador
         print("Antes de llamar a la funcion")
         funcion()
         print("Despues de llamar a la funcion")
@@ -43,19 +43,19 @@ def decorador(funcion): #Decorador: Podemos verlo como un envoltorio de la funci
 def saludo():
     print("Hola Usuario")
 
-#APLICAR DECORADOR MANUALMENTE
-saludo_modificado = decorador(saludo) #Guardar el resultado de funcion modificada con argumento 'saludo' pero haciendo referencia al objeto
-saludo_modificado() #Ejecutamos el decorador
+# APLICAR DECORADOR MANUALMENTE
+saludo_modificado = decorador(saludo) # Guardar el resultado de funcion modificada con argumento 'saludo' pero haciendo referencia al objeto
+saludo_modificado() # Ejecutamos el decorador
 
 
-#-----------------------------------------------
+# -----------------------------------------------
 
 
-#SINTAXIS MAS COMODA O FRECUENTE PARA LLMAR A LOS DECORADORES
-@decorador #@funcion-decoradora
-def despedida(): #funcion a decorar
+# SINTAXIS MAS COMODA O FRECUENTE PARA LLMAR A LOS DECORADORES
+@decorador # @funcion-decoradora
+def despedida(): # Funcion a decorar
     print("Adios usuario, vuelva pronto")
 
 print("\n---------------------\n")
-despedida() #Llamar a la funcion a decorar y ejecutarla
+despedida() # Llamar a la funcion a decorar y ejecutarla
 

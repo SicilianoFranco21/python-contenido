@@ -18,7 +18,7 @@
                             Esto simplifica el proceso de QA
 """
 
-#Este es el sistema abierto y generico para agregarle funcionalidades sin modificar lo ya escrito
+# Este es el sistema abierto y generico para agregarle funcionalidades sin modificar lo ya escrito
 class Notificador:
     def __init__(self, usuario, mensaje):
         self.usuario = usuario
@@ -27,22 +27,26 @@ class Notificador:
     def notificar(self):
         raise NotImplementedError
 
-#funcionalidad agregada (extensibilidad)
+
+# Funcionalidad agregada (extensibilidad)
 class NotificadorEmail(Notificador):
     def Notificar(self):
         print(f"Enviando mensaje via mail a {self.usuario.email}")
 
-#funcionalidad agregada (extensibilidad)
+
+# Funcionalidad agregada (extensibilidad)
 class NotificadorSMS(Notificador):
     def Notificar(self):
         print(f"Enviando SMS a {self.usuario.sms}")
 
-#funcionalidad agregada (extensibilidad)
+
+# Funcionalidad agregada (extensibilidad)
 class NotificadorWSP(Notificador):
     def Notificar(self):
         print(f"Enviando WSP a {self.usuario.whatsapp}")
 
-#funcionalidad agregada (extensibilidad)
+
+# Funcionalidad agregada (extensibilidad)
 class NotificadorTwitter(Notificador):
     def Notificar(self):
         print(f"Enviando WSP a {self.usuario.twitter}")
@@ -119,8 +123,8 @@ print(cliente_pdf_normal.generar_informe(datos))
 print(cliente_csv_resaltado.generar_informe(datos)) """
 
 
-#-------------------------------------------------
-#EJEMPLO 3
+# -------------------------------------------------
+# EJEMPLO 3
 # Definición de la clase base (abstracción)
 from abc import ABC, abstractmethod
 

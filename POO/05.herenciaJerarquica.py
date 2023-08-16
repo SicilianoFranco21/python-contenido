@@ -25,7 +25,7 @@ def mostrar_datos(objeto: object) -> None:
         print(f"{objeto.ganancias}\n")
 
 
-#Clase Padre
+# Clase Padre
 class Persona:
     def __init__(self, nombre, edad, nacionalidad):
         self.nombre = nombre
@@ -36,7 +36,7 @@ class Persona:
         print("Hola, estoy hablando un poco")
 
 
-#Clase Hija
+# Clase Hija
 class Empleado(Persona):
     def __init__(self, nombre, edad, nacionalidad, trabajo, salario):
         super().__init__(nombre, edad, nacionalidad)
@@ -44,7 +44,7 @@ class Empleado(Persona):
         self.salario = salario
 
 
-#Clase Hija
+# Clase Hija
 class Estudiante(Persona):
     def __init__(self, nombre, edad, nacionalidad, notas, universidad):
         super().__init__(nombre, edad, nacionalidad)
@@ -52,7 +52,7 @@ class Estudiante(Persona):
         self.universidad = universidad
 
 
-#Clase Hija
+# Clase Hija
 class Jefe(Persona):
     def __init__(self, nombre, edad, nacionalidad, empresa, ganancias):
         super().__init__(nombre, edad, nacionalidad)
@@ -60,12 +60,12 @@ class Jefe(Persona):
         self.ganancias = ganancias
 
 
-#Instancia de clase padre Persona
+# Instancia de clase padre Persona
 persona_random: Persona = Persona("Chen", 25, "Chino")
 
 
-#Instancia de clases hijas Empleado, Estudiante, Jefe
-#Aqui podemos apreciar la dependencia de las clases hijas con respecto a la clase padre, esto es Herencia Multiple
+# Instancia de clases hijas Empleado, Estudiante, Jefe
+# Aqui podemos apreciar la dependencia de las clases hijas con respecto a la clase padre, esto es Herencia Multiple
 trabajador: Empleado = Empleado("Fran", 25, "Argentino", "Progrmador", 225000)
 alumno: Estudiante = Estudiante("Nico", 24, "Chileno", [7, 8, 9], "UADE")
 gerente: Jefe = Jefe("Renzo", 25, "Ingles", "COTO", 0)

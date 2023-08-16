@@ -56,9 +56,9 @@
 """
 
 
-#Definimos una clase de la siguiente manera (class NombreClase()). Al definir una clase usamos PascalCase
+# Definimos una clase de la siguiente manera (class NombreClase()). Al definir una clase usamos PascalCase
 class Celular:
-    #Atributos ESTATICOS: POCO COMUN, para todos los objetos van a ser iguales ya que estan predefinidos
+    # Atributos ESTATICOS: POCO COMUN, para todos los objetos van a ser iguales ya que estan predefinidos
     """
     marca = "Samsung"
     modelo = "S23"
@@ -66,27 +66,27 @@ class Celular:
     """
 
     # self: Es una referencia a si mismo
-    def __init__(self, marca, modelo, camara): #__init__: Es un metodo constructor. Cada vez que instanciamos una clase, este se ejecuta automaticamente. Sirve para definir atributos especificamente por cada instancia
-        self.marca = marca #Esto es como decir celular.marca
-        self.modelo = modelo #modelo perteneciente a self.modelo, es una propiedad de self. modelo del lado derecho pertenece a init (accedemos a ese parametro) 
+    def __init__(self, marca, modelo, camara): # __init__: Es un metodo constructor. Cada vez que instanciamos una clase, este se ejecuta automaticamente. Sirve para definir atributos especificamente por cada instancia
+        self.marca = marca # Esto es como decir celular.marca
+        self.modelo = modelo # modelo perteneciente a self.modelo, es una propiedad de self. modelo del lado derecho pertenece a init (accedemos a ese parametro) 
         self.camara = camara
     
-    #Metodo creado para que la clase Celular realice una accion
-    def llamar(self): #Hay que pasarles el parametro self SI o SI a los METODOS DE INSTANCIA
+    # Metodo creado para que la clase Celular realice una accion
+    def llamar(self): # Hay que pasarles el parametro self SI o SI a los METODOS DE INSTANCIA
         print(f"Estas haciendo un llamado desde un: {self.modelo}")
     
     def cortar(self):
         print(f"Cortaste la llamada desde un: {self.modelo}")
 
-#Creamos un OBJETO, tipo de dato es Celular (se almacena en la ram). Le pasamos los parametros que definimos en el __init__
+# Creamos un OBJETO, tipo de dato es Celular (se almacena en la ram). Le pasamos los parametros que definimos en el __init__
 celular1 = Celular("Samsung", "S23", "48PM")
 celular2 = Celular("Apple", "Iphone 15 Pro", "96MP")
 print(celular1)
 
-#Accedemos al atributo del objeto: objeto.atributo
+# Accedemos al atributo del objeto: objeto.atributo
 print(celular1.marca)
 print(celular2.marca)
 
-#Utilizamos los metodos
+# Utilizamos los metodos
 celular1.llamar()
 celular2.cortar()

@@ -17,19 +17,19 @@
         [4] - MEJORA LA CLARIDAD DEL DISENIO: Evita el comportamiento inesperados y las relaciones entre clases y subclases se mantienen claras y coherentes
 """
 
-#CLASE BASE (Super-clase)
+# CLASE BASE (Super-clase)
 class Ave:
     def comer(self):
         return "Estoy comiendo"
 
 
-#CLASE DERIVADA (Sub-clase)
+# CLASE DERIVADA (Sub-clase)
 class AveVoladora(Ave):
     def volar(self):
         return "Estoy volando"
 
 
-#CLASE DERIVADA (Sub-clase)
+# CLASE DERIVADA (Sub-clase)
 class AveNoVoladora(Ave):
     pass
 
@@ -38,5 +38,5 @@ pinguino = AveNoVoladora()
 pajaro = AveVoladora()
 
 
-print("PINGUINO:", pinguino.comer()) #La sub-clase hace todo lo que hace la clase padre
-print("PAJARO:", pajaro.comer(), "||", pajaro.volar()) #La sub-clase puede hacer todo lo que la clase base + nuevas funcionalidades
+print("PINGUINO:", pinguino.comer()) # La sub-clase hace todo lo que hace la clase padre
+print("PAJARO:", pajaro.comer(), "||", pajaro.volar()) # La sub-clase puede hacer todo lo que la clase base + nuevas funcionalidades

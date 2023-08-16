@@ -32,7 +32,7 @@ class Animal:
 
 class Perro(Animal):
     def hacer_sonido(self):
-        super().hacer_sonido() #Esto no es necesario
+        super().hacer_sonido() # Esto no es necesario
         print("Guau guau")
 
 class Gato(Animal):

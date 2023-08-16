@@ -13,7 +13,7 @@ EJEMPLO:
 """
 
 
-#Clase Padre
+# Clase Padre
 class Persona:
     def __init__(self, nombre, edad, nacionalidad):
         self.nombre = nombre
@@ -24,7 +24,7 @@ class Persona:
         print("Hola, estoy hablando un poco")
 
 
-#Clase Hija
+# Clase Hija
 class Artista:
     def __init__(self, habilidad):
         self.habilidad = habilidad
@@ -33,7 +33,7 @@ class Artista:
         return f"Mi habilidad es: {self.habilidad}"
 
 
-#Clase Hija
+# Clase Hija
 class EmpleadoArtista(Persona, Artista):
     def __init__(self, nombre, edad, nacionalidad, habilidad, empresa, salario):
         Persona.__init__(self, nombre, edad, nacionalidad)
@@ -49,11 +49,11 @@ class EmpleadoArtista(Persona, Artista):
 roberto: EmpleadoArtista = EmpleadoArtista("Roberto", 43, "Argentino", "Cantar", "Google", 100000)
 roberto.presentarse()
 
-#issubclass(clase1, clase2): Valida la clase 1 hereda de la clase 2. True si es verdadero, caso contrario, false
+# issubclass(clase1, clase2): Valida la clase 1 hereda de la clase 2. True si es verdadero, caso contrario, false
 herencia: bool = issubclass(EmpleadoArtista, Artista)
 print("Instancia herencia:", herencia)
 
 
-#isinstance(objeto, clase): Valida si el objeto es una instancia de la clase. Ture si es verdadero, caso contrario, false
+# isinstance(objeto, clase): Valida si el objeto es una instancia de la clase. Ture si es verdadero, caso contrario, false
 instancia: bool = isinstance(roberto, EmpleadoArtista)
 print("Instancia 'instancia':", instancia)

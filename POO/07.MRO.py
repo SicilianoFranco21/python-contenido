@@ -65,7 +65,7 @@ class D(B, C):
 d = D()
 d.hablar()
 
-#VER EL MRO con el metodo ---> .mro()
+# VER EL MRO con el metodo ---> .mro()
 print(D.mro())
 
 

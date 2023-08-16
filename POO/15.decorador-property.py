@@ -30,15 +30,15 @@ class Persona:
     def nombre(self, nuevo_nombre):
         self.__nombre = nuevo_nombre
     
-    @nombre.deleter #decorador para eliminar propiedades, sin este no se puede
+    @nombre.deleter # decorador para eliminar propiedades, sin este no se puede
     def nombre(self):
-        del self.__nombre #del: Operador que nos elimina valores
+        del self.__nombre # del: Operador que nos elimina valores
 
 
 persona: Persona = Persona("Mike", 24)
-nombre = persona.nombre #Si se intenta modificar el atributo tira un error, dado que es un getter, no setter
-print(nombre) #No se puede modificar de ninguna manera, ni con: persona.__nombre = "nuevo nombre", persona.nombre = "nuevo nombre"
-#Notemos que ni con el acceso a la variable original (privada) ni con la del getter podemos modificar el nombre
+nombre = persona.nombre # Si se intenta modificar el atributo tira un error, dado que es un getter, no setter
+print(nombre) # No se puede modificar de ninguna manera, ni con: persona.__nombre = "nuevo nombre", persona.nombre = "nuevo nombre"
+# Notemos que ni con el acceso a la variable original (privada) ni con la del getter podemos modificar el nombre
 
 persona.nombre = "Franco"
 actualizar_nombre = persona.nombre

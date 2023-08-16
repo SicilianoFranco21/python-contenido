@@ -5,7 +5,7 @@ ABSTRACCION: Ocultar la complejidad interna de un sistema con el proposito
             "Concentrarse en el contexto y no en un punto en especifico del mismo"
 """
 
-#EJEMPLO DE ABSTRACCION
+# EJEMPLO DE ABSTRACCION
 class Auto:
     def __init__(self):
         self._estado = "apagado"
@@ -14,7 +14,7 @@ class Auto:
         self._estado = "encendido"
         print("El auto esta encendido")
     
-    #Este es un ejemplo de abstraccion, dado que no necesitamos prenderlo y apagarlo y luego conducir, con conducir lo prenderemos automaticamente
+    # Este es un ejemplo de abstraccion, dado que no necesitamos prenderlo y apagarlo y luego conducir, con conducir lo prenderemos automaticamente
     def conducir(self):
         if self._estado == "apagado":
             self.encender()

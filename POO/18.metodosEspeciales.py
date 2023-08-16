@@ -18,15 +18,15 @@
 
 
 class Monstruo:
-    def __init__(self, lvl, vida, magia): #Usamos el metodo especial constructor __init__
+    def __init__(self, lvl, vida, magia): # Usamos el metodo especial constructor __init__
         self.lvl = lvl
         self.vida = vida
         self.magia = magia
     
-    def __str__(self): #Usamos el metodo especial __str__
+    def __str__(self): # Usamos el metodo especial __str__
         return f"Monstruo lvl {self.lvl}\n> HP: {self.vida}\n> MP: {self.magia}"
 
-    def __repr__(self): #Usamos el metodo especial __repr__
+    def __repr__(self): # Usamos el metodo especial __repr__
         return f"Monstruo({self.lvl}, {self.vida}, {self.magia})"
     
     def __add__(self, otro_monstruo):
@@ -38,24 +38,24 @@ class Monstruo:
 
 monstruo_lvl20: Monstruo = Monstruo(20, 100, 250)
 monstruo_lvl40: Monstruo = Monstruo(40, 200, 500)
-print(monstruo_lvl20) #Aca se ve el resultado del metodo __str__
+print(monstruo_lvl20) # Aca se ve el resultado del metodo __str__
 print("--------------")
 print(monstruo_lvl40)
 
 print("--------------")
-#Para utilizar __add__ debemos sumar dos instancias de clase guardandolas en una variable
+# Para utilizar __add__ debemos sumar dos instancias de clase guardandolas en una variable
 monstruo_lvl60: Monstruo = monstruo_lvl20 + monstruo_lvl40
 print(monstruo_lvl60)
 
 
 print("--------------")
-#Sumamos 3 terminos de instancia de clase
+# Sumamos 3 terminos de instancia de clase
 monstruo_op: Monstruo = monstruo_lvl20 + monstruo_lvl40 + monstruo_lvl60
 print(monstruo_op)
 
 
 print("\n==============\n")
-representacion = repr(monstruo_lvl20) #Uso de repr(obj) ya que existe un metodo especial __repr__
+representacion = repr(monstruo_lvl20) # Uso de repr(obj) ya que existe un metodo especial __repr__
 print(representacion)
 
 
@@ -70,5 +70,5 @@ resultado = eval(representacion)  # Se evalúa la cadena utilizando eval()
 print(resultado)  # Se muestra el resultado de eval(), que debería ser un NUEVO OBJETO Monstruo
 """
 
-#codigo_magico = "print('¡Hola, soy una varita mágica de programación!')"
-#eval(codigo_magico) 
+# codigo_magico = "print('¡Hola, soy una varita mágica de programación!')"
+# eval(codigo_magico) 

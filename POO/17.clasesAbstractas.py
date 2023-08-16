@@ -46,7 +46,7 @@
 
 """
 
-#Debemos importar 'abc' para trabajar con clases abstractas
+# Debemos importar 'abc' para trabajar con clases abstractas
 from abc import ABC, abstractclassmethod
 
 
@@ -62,16 +62,16 @@ class Persona(ABC):
     def hacer_actividad(self):
         pass
     
-    #Aca no usamos metodo abstracto dado que esto es algo que todas las clases concretas tendran en COMUN
+    # Aca no usamos metodo abstracto dado que esto es algo que todas las clases concretas tendran en COMUN
     def presentarse(self):
         print(f"Hola, me llamo {self.nombre} y tengo {self.edad} anios")
 
 
 class Estudiante(Persona):
     def __init__(self, nombre, edad, sexo, actividad):
-        super().__init__(nombre, edad, sexo, actividad) #Hereda de la clase abstracta
+        super().__init__(nombre, edad, sexo, actividad) # Hereda de la clase abstracta
 
-    def hacer_actividad(self): #Implementamos hacer_actividad (metodo abstracto)
+    def hacer_actividad(self): # Implementamos hacer_actividad (metodo abstracto)
         print(f"Estoy estudiando {self.actividad}")
 
 
@@ -84,8 +84,8 @@ class Trabajador(Persona):
     
 
 franco: Estudiante = Estudiante("Franco", 25, "Masculino", "programacion")
-franco.presentarse() #llamamos al metodo comun a todas las clases 
-franco.hacer_actividad() #llamamos al metodo abstracto, estudiante le da una implementacion puntual
+franco.presentarse() # Llamamos al metodo comun a todas las clases 
+franco.hacer_actividad() # Llamamos al metodo abstracto, estudiante le da una implementacion puntual
 print("\n")
 
 

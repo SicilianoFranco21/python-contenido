@@ -46,7 +46,7 @@
 
 from abc import ABC, abstractmethod
 
-#Las clases Trabajador, Comedor y Durmiente cada una tiene un metodo abstracto con el proposito de aplicar ISP
+# Las clases Trabajador, Comedor y Durmiente cada una tiene un metodo abstracto con el proposito de aplicar ISP
 class Trabajador(ABC):
     @abstractmethod
     def trabajar(self):
@@ -65,7 +65,7 @@ class Durmiente(ABC):
         pass
 
 
-#Tanto la clase Robot como Humano heredan lo que necesitan para caracterizarse
+# Tanto la clase Robot como Humano heredan lo que necesitan para caracterizarse
 class Humano(Trabajador, Comedor, Durmiente):
     def comer(self):
         print("El humano esta comiendo")

@@ -37,7 +37,7 @@ class Persona:
 
 
 class Empleado(Persona):
-    #Esto es como un constructor dentro de otro constructor
+    # Esto es como un constructor dentro de otro constructor
     def __init__(self, nombre, edad, nacionalidad, trabajo, salario):
         super().__init__(nombre, edad, nacionalidad)
         self.trabajo = trabajo
