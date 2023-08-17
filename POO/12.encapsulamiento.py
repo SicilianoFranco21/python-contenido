@@ -29,7 +29,7 @@
                 del programa, siempre que los metodos publicos sigan funcionando de la
                 misma manera
         3. Ocultamiento de información: Oculta los detalles internos de una clase, lo que facilita su uso
-        para otros desarrolladores sin necesidad de conocer como funciona internament
+            para otros desarrolladores sin necesidad de conocer como funciona internamente
 
     -------------------------------------------------------------------------------------------
 
