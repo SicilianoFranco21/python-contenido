@@ -40,9 +40,10 @@ print("\n")
 
 
 # Aca finaliza el ejercicio, de aca para abajo se realizo un programa mas completo con distintas opciones aplicando programacion estructurada
+# En caso de querer ver funcionamiento quitar las triple comillas al principio y final del codigo de bajo de la linea punteada
 # -------------------------------------------------------------------------------------------------------------------------------------------
 
-
+''''
 # Procedimiento encargado de mostrar las opciones del programa
 def ver_opciones():
     print("""
@@ -167,3 +168,4 @@ def main():
     os.system('cls')
     menu_principal(opcion_validada)
 main()
+'''
