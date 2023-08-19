@@ -8,9 +8,13 @@ cada uno sea tocado.
 # RECOMENDACION: Expresar libertad creativa en el ejercicio. No descuidar el enfoque del mismo y que funcione correctamente
 
 
+# Utilizaremos una clase padre abstracta con el proposito de obligar al programador a definir el metodo tocar si o si
+from abc import ABC, abstractclassmethod, abstractmethod
+
 
 # Crear clase generica instrumento
-class Instrumento:
+class Instrumento(ABC):
+    @abstractmethod
     def tocar(self):
         pass
 
