@@ -33,7 +33,7 @@ class Persona:
         self.nacionalidad = nacionalidad
 
     def hablar(self):
-        print("Hola, estoy hablando un poco")
+        print(f"Hola, estoy hablando un poco. Soy {self.__class__.__name__} y me llamo {self.nombre}")
 
 
 # Clase Hija
@@ -42,6 +42,9 @@ class Empleado(Persona):
         super().__init__(nombre, edad, nacionalidad)
         self.trabajo = trabajo
         self.salario = salario
+    
+    def hablar(self):
+        super().hablar()
 
 
 # Clase Hija
@@ -51,6 +54,9 @@ class Estudiante(Persona):
         self.notas = notas
         self.universidad = universidad
 
+    def hablar(self):
+        super().hablar()
+
 
 # Clase Hija
 class Jefe(Persona):
@@ -59,6 +65,9 @@ class Jefe(Persona):
         self.empresa = empresa
         self.ganancias = ganancias
 
+    def hablar(self):
+        super().hablar()
+
 
 # Instancia de clase padre Persona
 persona_random: Persona = Persona("Chen", 25, "Chino")
@@ -66,7 +75,7 @@ persona_random: Persona = Persona("Chen", 25, "Chino")
 
 # Instancia de clases hijas Empleado, Estudiante, Jefe
 # Aqui podemos apreciar la dependencia de las clases hijas con respecto a la clase padre, esto es Herencia Multiple
-trabajador: Empleado = Empleado("Fran", 25, "Argentino", "Progrmador", 225000)
+trabajador: Empleado = Empleado("Fran", 25, "Argentino", "Programador", 225000)
 alumno: Estudiante = Estudiante("Nico", 24, "Chileno", [7, 8, 9], "UADE")
 gerente: Jefe = Jefe("Renzo", 25, "Ingles", "COTO", 0)
 
@@ -75,3 +84,7 @@ mostrar_datos(persona_random)
 mostrar_datos(trabajador)
 mostrar_datos(alumno)
 mostrar_datos(gerente)
+
+trabajador.hablar()
+alumno.hablar()
+gerente.hablar()
