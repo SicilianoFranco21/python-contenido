@@ -27,8 +27,9 @@
             -> class ClaseAbstracta(ABC):
         
         3) TERCERO:
-            Crear un metodo abstracto con el decorador 'abstractclassmethod'
+            Crear un metodo abstracto con el decorador 'abstractclassmethod' o 'abstractmethod'
             -> @abstractclassmethod
+            -> @abstractmethod
     
     >>> VENTAJAS:
         1. EVITA COMPORTAMIENTOS ERRONEOS: Cuando una clase que hereda de la clase abstracta si o si necesita realizar "x" metodo, como "respirar"
@@ -47,18 +48,18 @@
 """
 
 # Debemos importar 'abc' para trabajar con clases abstractas
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractclassmethod, abstractmethod
 
 
 class Persona(ABC):
-    @abstractclassmethod
+    @abstractmethod
     def __init__(self, nombre, edad, sexo, actividad):
         self.nombre = nombre
         self.edad = edad
         self.sexo = sexo
         self.actividad = actividad
     
-    @abstractclassmethod
+    @abstractmethod
     def hacer_actividad(self):
         pass
     
