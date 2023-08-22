@@ -52,7 +52,6 @@ from abc import ABC, abstractclassmethod, abstractmethod
 
 
 class Persona(ABC):
-    @abstractmethod
     def __init__(self, nombre, edad, sexo, actividad):
         self.nombre = nombre
         self.edad = edad
