@@ -22,6 +22,6 @@ Repositorio dedicado al aporte de teoria, ejemplos y ejercicios de los distintos
 
 <<< FUENTES >>>
 - Apuntes (teoria + ejercicios) y contenido general de autoria propia
-- https://www.youtube.com/@soydalto (Usado parcialmente para la seccion POO)
+- https://docs.python.org/3/
 - Aplicar PromptEngineering a ChatGPT3
 - https://uniwebsidad.com/
