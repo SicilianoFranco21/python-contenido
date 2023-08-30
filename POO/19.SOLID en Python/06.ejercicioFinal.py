@@ -36,6 +36,7 @@ from abc import ABC, abstractmethod, abstractclassmethod
 import os
 
 
+# Funciona como "interfaz" para crear personajes mas especificos, en este caso Guerrero y Mago
 class PersonajeGenerico(ABC):
     def __init__(self, nombre, vida, stamina, ataque, defensa):
         self.nombre = nombre
@@ -44,11 +45,13 @@ class PersonajeGenerico(ABC):
         self.ataque = ataque
         self.defensa = defensa
     
+    # atacar() y descansar() son metodos abstractos que son comunes a todas las clases hijas que hereden de PersonajeGenerico
     @abstractmethod
     def atacar(self, enemigo):
         danio: int = self.ataque - enemigo.defensa
         if danio > 0:
             print(f"El {self.__class__.__name__} {self.nombre} ha daniado a el {enemigo.__class__.__name__} {enemigo.nombre} por {danio} puntos")
+            enemigo.vida -= danio
         else:
             print(f"El {self.__class__.__name__} {self.nombre} no consiguio lastimar a {enemigo.__class__.__name__} {enemigo.nombre}")
     
@@ -63,67 +66,112 @@ class Guerrero(PersonajeGenerico):
     def __init__(self, nombre, vida, stamina, ataque, defensa):
         super().__init__(nombre, vida, stamina, ataque, defensa)
     
+    # Hereda se la clase padre el metodo atacar + se le agrega una extension del funcionamiento de dicho metodo
     def atacar(self, enemigo):
         super().atacar(enemigo)
         self.stamina -= 10
-        
+    
+    # Hereda se la clase padre el metodo descansar + se le agrega una extension del funcionamiento de dicho metodo
     def descansar(self):
-        recuperacion_vida: int = int((self.vida*25)/100)
+        recuperacion_vida: int = int((self.vida*25)/100) #Formula para obtener el porcentaje de un numero -> (numero*porcentaje_a_obtener)/100
         recuperacion_stamina: int = int((self.stamina*25)/100)
         super().descansar(recuperacion_vida, recuperacion_stamina)
+
+    # Cada vez que imprimamos a la instancia de la clase aparecera lo indicado en el return
+    def __str__(self):
+        return f"{self.__class__.__name__} {self.nombre}"
 
 
 class Gladiador(PersonajeGenerico):
     def __init__(self, nombre, vida, stamina, ataque, defensa):
         super().__init__(nombre, vida, stamina, ataque, defensa)
 
+    # Hereda se la clase padre el metodo atacar + se le agrega una extension del funcionamiento de dicho metodo
     def atacar(self, enemigo):
         super().atacar(enemigo)
         self.stamina -= 25
 
+    # Hereda se la clase padre el metodo descansar + se le agrega una extension del funcionamiento de dicho metodo
     def descansar(self):
-        recuperacion_vida: int = int((self.vida*25)/100)
+        recuperacion_vida: int = int((self.vida*25)/100) #Formula para obtener el porcentaje de un numero -> (numero*porcentaje_a_obtener)/100
         recuperacion_stamina: int = int((self.stamina*50)/100)
         super().descansar(recuperacion_vida, recuperacion_stamina)
 
+    # Cada vez que imprimamos a la instancia de la clase aparecera lo indicado en el return
+    def __str__(self):
+        return f"{self.__class__.__name__} {self.nombre}"
 
+
+# Clase encargada de ejecutar el juego
 class Juego:
     @classmethod
-    def ganar_juego():
-        pass
+    def obtener_jugadores_vivos(cls, jugadores_vivos: list):
+        for jugador in jugadores_vivos:
+            if jugador.vida <= 0:
+                jugadores_vivos.remove(jugador)
     
     @classmethod
-    def jugar(cls, personajes: list):
-        cantidad_jugadores: int = len(personajes)
+    def determinar_ganador(cls, cantidad_jugadores_vivos: int, jugadores_vivos: list):
+        jugando: bool = True
+        if cantidad_jugadores_vivos == 1:
+            print(f"El ganador es {jugadores_vivos[0]}")
+            jugando = False
+        return jugando
+        
+    
+    @classmethod
+    def validar_opciones(cls, cantidad_opciones: int, mensaje: str):
+        opcion: int = int(input(f"Ingresar {mensaje}: "))
+        while opcion < 1 or opcion > cantidad_opciones:
+            opcion: int = int(input(f"Intentelo nuevamente, ingresar {mensaje}: "))
+        return opcion
+    
+    @classmethod
+    def seleccionar_objetivo(cls, cantidad_jugadores, jugadores):
+        index_objetivo: int = cls.validar_opciones(cantidad_jugadores, mensaje="objetivo a atacar") - 1
+        objetivo = jugadores[index_objetivo]
+        return objetivo
+        
+    @classmethod
+    def jugar(cls, jugadores: list):
+        cantidad_jugadores: int = len(jugadores)
+        jugadores_vivos: list = jugadores.copy() #Copia de jugadores con el proposito de usarla como lista auxiliar y no romper el programa por modificar la "fuente de datos" original
         turno: int = 1
         jugando: bool = True
+        
         while jugando:
             index_jugador_actual: int = (turno - 1)%cantidad_jugadores
-            jugador_actual = personajes[index_jugador_actual]
-            comando: str = input("1. Atacar\n2. Descansar\n3. Pasar turno\nIngresar un comando: ")
-            if comando == "1":
-                pass
-            elif comando == "2":
+            jugador_actual = jugadores[index_jugador_actual]
+            print(f"\n>>> Turno {turno}\n>>> Le toca a {jugador_actual}\n")
+            
+            # Bloque de codigo encargado de ejecutar un comando introducido por el usuario
+            print("1. Atacar\n2. Descansar\n3. Pasar turno")
+            OPCIONES_COMBATE: int = 3
+            comando: int = cls.validar_opciones(OPCIONES_COMBATE, mensaje="comando")
+            if comando == 1:
+                os.system("cls")
+                objetivo = cls.seleccionar_objetivo(cantidad_jugadores, jugadores)
+                jugador_actual.atacar(objetivo)
+            elif comando == 2:
+                os.system("cls")
                 jugador_actual.descansar()
-            elif comando == "3":
-                pass
-            else:
-                pass
-                #print("Vuelva a intentarlo por favor")
-                #comando: str = input("1. Atacar\n2. Descansar\n3. Pasar turno\nIngresar un comando: ")
+            elif comando == 3:
+                os.system("cls")
+                print(f"{jugador_actual.nombre} decide pasar su turno")
+            
+            # Este bloque de codigo evalua cual es el jugador que queda en pie
+            cls.obtener_jugadores_vivos(jugadores_vivos)
+            cantidad_jugadores_vivos: int = len(jugadores_vivos)
+            jugando: bool = cls.determinar_ganador(cantidad_jugadores_vivos, jugadores_vivos)
+            
             turno += 1
-            print(turno)
 
 
-guerrero = Guerrero("Manowar", 100, 120, 15, 10)
+# Crear instancias de clases concretas 
+guerrero = Guerrero("Manowar", 100, 120, 100, 15)
 gladiador = Gladiador("Gladius", 100, 100, 15, 20)
 
-guerrero.atacar(gladiador)
-print()
-gladiador.atacar(guerrero)
-print()
-guerrero.descansar()
-print()
-gladiador.descansar()
-
+# Ejecutar el metodo de clase jugar() de la clase Juego
 Juego.jugar([guerrero, gladiador])
+
+
