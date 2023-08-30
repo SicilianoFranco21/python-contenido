@@ -88,7 +88,31 @@ class Gladiador(PersonajeGenerico):
 
 
 class Juego:
-    pass
+    @classmethod
+    def ganar_juego():
+        pass
+    
+    @classmethod
+    def jugar(cls, personajes: list):
+        cantidad_jugadores: int = len(personajes)
+        turno: int = 1
+        jugando: bool = True
+        while jugando:
+            index_jugador_actual: int = (turno - 1)%cantidad_jugadores
+            jugador_actual = personajes[index_jugador_actual]
+            comando: str = input("1. Atacar\n2. Descansar\n3. Pasar turno\nIngresar un comando: ")
+            if comando == "1":
+                pass
+            elif comando == "2":
+                jugador_actual.descansar()
+            elif comando == "3":
+                pass
+            else:
+                pass
+                #print("Vuelva a intentarlo por favor")
+                #comando: str = input("1. Atacar\n2. Descansar\n3. Pasar turno\nIngresar un comando: ")
+            turno += 1
+            print(turno)
 
 
 guerrero = Guerrero("Manowar", 100, 120, 15, 10)
@@ -101,3 +125,5 @@ print()
 guerrero.descansar()
 print()
 gladiador.descansar()
+
+Juego.jugar([guerrero, gladiador])
