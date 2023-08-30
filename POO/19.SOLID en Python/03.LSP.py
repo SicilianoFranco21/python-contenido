@@ -1,11 +1,18 @@
 """
 >>> LSP: Se enfoca en como las sub-clases deben relacionarse con las superclases en un sistema de herencia.
-        Establece que una subclase (ya sea actualizada o mejorada con respecto a la clase base) debe poder ser usada
-        en lugar de su clase base sin alterar el comportamiento del programa. Es decir, la sub-clase
-        SUSTITUYE a la clase base sin alterar el programa
+        Establece que una subclase (ya sea actualizada o mejorada con respecto a la clase base) deben poder ser sustituidas
+        por su clase base sin alterar el comportamiento del programa. Es decir, la clase-base
+        SUSTITUYE a la clase hija sin alterar el programa
         - Todo lo que la clase base haga, tambien lo debe poder hacer la subclase
-        - ENFOQUE --> Relacion entre clases y subclases, sustitucion de clase por subclase en los lugares donde la primera existia
+        - ENFOQUE --> Relacion entre clases y subclases, sustitucion de subclase por clase en los lugares donde la primera existia
 
+    Esto significa:
+        Esto significa que, dado que la clase B es una subclase de la clase A, 
+        deberíamos poder pasar un objeto de la clase B a cualquier método que espere un objeto de la clase A 
+        y el método no debería dar ningún resultado extraño en ese caso.
+        Este es el comportamiento esperado, porque cuando usamos la herencia asumimos que la clase secundaria hereda todo 
+        lo que tiene la superclase. La clase secundaria extiende el comportamiento pero nunca lo reduce.
+        
     >>> EJEMPLO: Construimos una clase Jugador que puede moverse, luego construimos una clase hija JugadorMejorado
                 que se mueve mas rapido, segun el LSP, la sub-clase JugadorMejorado deberia SUSTITUIR efectivamente a la clase
                 Jugador en todos los lugares donde esta ultima fue implementada

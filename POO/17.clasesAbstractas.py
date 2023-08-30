@@ -23,7 +23,7 @@
                 [2] - from abc import *
 
         2) SEGUNDO:
-            La clase abstracta debe heredar de ABC...
+            La clase abstracta debe heredar de ABC... (Tener en cuenta que es una convencion, Python no evita que se instancien clases abstractas, a menos que haya metodos abstractos)
             -> class ClaseAbstracta(ABC):
         
         3) TERCERO:
@@ -48,7 +48,7 @@
 """
 
 # Debemos importar 'abc' para trabajar con clases abstractas
-from abc import ABC, abstractclassmethod, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class Persona(ABC):

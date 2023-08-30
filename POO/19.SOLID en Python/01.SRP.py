@@ -1,5 +1,5 @@
 """
->>> SRP: Una clase deberia tener una unica razon para cambiar, es decir, una unica responsabilidad
+>>> SRP: Una clase deberia tener una unica razon o proposito, es decir, una unica responsabilidad
         Cada clase debe hacer solo una tarea/responsabilidad y hacerla bien
         -> Si una clase tiene mas de una funcionalidad, se busca separar en dos clases o mas para que cada clase
             se encargue de una sola cosa
