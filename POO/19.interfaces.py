@@ -78,7 +78,7 @@ class Personaje(ABC):
 
     # Metodo especial, al no ser utilizado el decorador @abstractmethod no es necesario implementarlo en las clases hijas
     def __str__(self):
-        return f"{self.nombre} es un {__class__.__name__}"
+        return f"{self.nombre} es un {self.__class__.__name__}"
 
 
 # Usar Interfaz para crear a nuestros personajes
