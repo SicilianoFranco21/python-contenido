@@ -117,7 +117,6 @@ class Juego:
             print(f"El ganador es {jugadores_vivos[0]}")
             jugando = False
         return jugando
-        
     
     @classmethod
     def validar_opciones(cls, cantidad_opciones: int, mensaje: str):
